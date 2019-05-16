@@ -12,7 +12,7 @@ import com.myweb.utils.DB;
 public class AdminDao {
 
 	
-	// 查询管理员
+	// 查询管理员测试
 	public Admin getAdminByUsernameAndPwd(String username,String password) {
 
 		Admin admin = null;
