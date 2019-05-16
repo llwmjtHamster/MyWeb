@@ -1,0 +1,48 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MyWeb:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MyWeb_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MyWeb" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="commons-beanutils-1.8.0.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="commons-collections-3.2.1.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="commons-fileupload-1.2.1.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="commons-io-1.3.2.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="commons-io-1.4.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="commons-lang-2.6.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="commons-logging-1.1.1.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="dwr.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="ezmorph-1.0.6.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="fastjson-1.2.4.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="FCKeditor-2.3.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="fckeditor-java-core-2.4.1.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="jcommon-1.0.23.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="jfreechart-1.0.19.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="jspsmartupload.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="jstl-1.2.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="msutil.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="mysql-connector-java-5.0.4-bin.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="org.json.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="poi-3.1-FINAL-20080629.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="poi-3.9-20121203.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="poi-contrib-3.1-FINAL-20080629.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="poi-examples-3.9-20121203.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="poi-excelant-3.9-20121203.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="poi-ooxml-3.9-20121203.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="poi-ooxml-schemas-3.9-20121203.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="poi-scratchpad-3.1-FINAL-20080629.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="poi-scratchpad-3.9-20121203.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="slf4j-api-1.5.2.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="slf4j-simple-1.5.2.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="xom-1.2.6.jar" module-name="MyWeb" />
+          <element id="library" level="module" name="zxing.jar" module-name="MyWeb" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="MyWeb/web/Web" />
+      <element id="javaee-facet-resources" facet="MyWeb/web/Web" />
+    </root>
+  </artifact>
+</component>

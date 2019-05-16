@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <!-- 过滤器 -->
+
+
+    <servlet>
+        <servlet-name>SimpleUploader</servlet-name>
+        <servlet-class>com.myweb.servlet.CKEditorUploadServlet</servlet-class>
+        <init-param>
+            <param-name>baseDir</param-name>
+            <param-value>/UserFiles/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>enabled</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>AllowedExtensionsFile</param-name>
+            <param-value></param-value>
+        </init-param>
+        <init-param>
+            <param-name>DeniedExtensionsFile</param-name>
+            <param-value>
+                html|htm|php|php2|php3|php4|php5|phtml|pwml|inc|asp|aspx|ascx|jsp|cfm|cfc|pl|bat|exe|com|dll|vbs|js|reg|cgi|htaccess|asis|ftl
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>AllowedExtensionsImage</param-name>
+            <param-value>jpg|gif|jpeg|png|bmp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>DeniedExtensionsImage</param-name>
+            <param-value></param-value>
+        </init-param>
+        <init-param>
+            <param-name>AllowedExtensionsFlash</param-name>
+            <param-value>swf|fla</param-value>
+        </init-param>
+        <init-param>
+            <param-name>DeniedExtensionsFlash</param-name>
+            <param-value></param-value>
+        </init-param>
+
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <filter>
+        <display-name>EcodingFilter</display-name>
+        <filter-name>EcodingFilter</filter-name>
+        <filter-class>com.myweb.utils.EnCodeFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>EcodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- 系统首页-->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+
+
+    <servlet-mapping>
+        <servlet-name>SimpleUploader</servlet-name>
+        <url-pattern>/ckeditor/uploader</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.myweb.servlet.LoginServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.myweb.servlet.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewsServlet</servlet-name>
+        <servlet-class>com.myweb.servlet.NewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewsServlet</servlet-name>
+        <url-pattern>/NewsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SPNewsServlet</servlet-name>
+        <servlet-class>com.myweb.servlet.SPNewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SPNewsServlet</servlet-name>
+        <url-pattern>/SPNewsServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.myweb.servlet.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <servlet-class>com.myweb.servlet.FileUploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <url-pattern>/FileUploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GzhServlet</servlet-name>
+        <servlet-class>com.myweb.servlet.GzhServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GzhServlet</servlet-name>
+        <url-pattern>/GzhServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GzhwzServlet</servlet-name>
+        <servlet-class>com.myweb.servlet.GzhwzServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GzhwzServlet</servlet-name>
+        <url-pattern>/GzhwzServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>WdgzServlet</servlet-name>
+        <servlet-class>com.myweb.servlet.WdgzServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WdgzServlet</servlet-name>
+        <url-pattern>/WdgzServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--手机端调用service-->
+    <servlet>
+        <servlet-name>UserService</servlet-name>
+        <servlet-class>com.myweb.service.UserService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserService</servlet-name>
+        <url-pattern>/UserService</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GzhService</servlet-name>
+        <servlet-class>com.myweb.service.GzhService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GzhService</servlet-name>
+        <url-pattern>/GzhService</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GzhwzService</servlet-name>
+        <servlet-class>com.myweb.service.GzhwzService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GzhwzService</servlet-name>
+        <url-pattern>/GzhwzService</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>WdgzService</servlet-name>
+        <servlet-class>com.myweb.service.WdgzService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WdgzService</servlet-name>
+        <url-pattern>/WdgzService</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NewsService</servlet-name>
+        <servlet-class>com.myweb.service.NewsService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewsService</servlet-name>
+        <url-pattern>/NewsService</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>FileUploadService</servlet-name>
+        <servlet-class>com.myweb.service.FileUploadService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileUploadService</servlet-name>
+        <url-pattern>/FileUploadService</url-pattern>
+    </servlet-mapping>
+
+</web-app>

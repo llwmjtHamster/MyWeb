@@ -1,0 +1,4 @@
+#Thu Jan 10 13:05:21 CST 2019
+eclipse.preferences.version=1
+validator.Checked=WebRoot/site/zw_detail.jsp,WebRoot/admin/zhiwei/zhiwei_List.jsp,WebRoot/user/grxx.jsp,WebRoot/qy/zhiwei/zhiwei_List.jsp
+validator.Unchecked=
